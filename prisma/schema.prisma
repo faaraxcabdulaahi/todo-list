@@ -32,3 +32,14 @@ model User {
 }
 
 
+model Todo{
+  id String @id @default(auto()) @map("_id") @db.ObjectId
+  title String
+  completed Boolean @default(false)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  userId String @db.ObjectId
+  user User @relation(fields: [userId], references: [id], onDelete:Cascade)
+  @@map("todos")
+  @@index([userId])
+}

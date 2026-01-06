@@ -16,3 +16,10 @@ export type UpdateTodoInput = {
     title?:string;
     completed?:boolean;
 };
+
+export type User = {
+    id:string;
+    email:string;
+    name?:string;
+    image?:string;
+}

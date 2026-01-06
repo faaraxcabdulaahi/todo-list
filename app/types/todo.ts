@@ -9,7 +9,10 @@ export type Todo = {
 
 export type CreateTodoInput = {
   title: string;
-  completed?:boolean;
+  completed?: boolean;
 };
 
-
+export type UpdateTodoInput = {
+    title?:string;
+    completed?:boolean;
+};
